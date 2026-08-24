@@ -1,18 +1,74 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pixel AI Office - Multi-Agent Retro Workstation</title>
-    <meta name="description" content="An interactive retro pixel-art office simulation where AI workers collaborate on projects under the direction of the manager and owner using Gemini API." />
-    <meta property="og:title" content="Pixel AI Office - Multi-Agent Retro Workstation" />
-    <meta property="og:description" content="An interactive retro pixel-art office simulation where AI workers collaborate on projects under the direction of the manager and owner using Gemini API." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=VT323&display=swap" rel="stylesheet">
-  </head>
-  <body class="bg-slate-950 text-slate-100 overflow-x-hidden antialiased">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+import { WorkerCharacter } from '../types';
+
+export const DEFAULT_WORKERS: WorkerCharacter[] = [
+  {
+    id: 'worker-pm',
+    name: 'Sophia Chen',
+    role: 'Lead Project Manager',
+    department: 'Leadership',
+    personality: 'Hyper-organized sprint architect who keeps everyone aligned.',
+    avatarSprite: 'pm',
+    spriteColor: '#a855f7',
+    specialty: ['Task Decomposition', 'Sprint Planning', 'QA Reviews'],
+    tasksCompleted: 48,
+    status: 'idle',
+    thoughtBubble: 'Reviewing current project scope...',
+    energy: 95,
+    coffeeLevel: 80,
+    deskPosition: { x: 120, y: 160 },
+    currentPosition: { x: 120, y: 160 }
+  },
+  {
+    id: 'worker-frontend',
+    name: 'Leo Thorne',
+    role: 'Frontend UI/UX Architect',
+    department: 'Engineering',
+    personality: 'Pixel perfectionist who obsesses over Tailwind micro-interactions.',
+    avatarSprite: 'frontend',
+    spriteColor: '#06b6d4',
+    specialty: ['React 19', 'Tailwind CSS', 'Motion FX', 'Retro Shaders'],
+    tasksCompleted: 62,
+    status: 'idle',
+    thoughtBubble: 'Optimizing render tree for pixel canvas...',
+    energy: 88,
+    coffeeLevel: 90,
+    deskPosition: { x: 260, y: 160 },
+    currentPosition: { x: 260, y: 160 },
+    isTopPerformer: true,
+    badge: 'TOP CODER'
+  },
+  {
+    id: 'worker-backend',
+    name: 'Elena Rostova',
+    role: 'Staff Distributed Systems Engineer',
+    department: 'Engineering',
+    personality: 'High-throughput concurrency expert who eats race conditions for breakfast.',
+    avatarSprite: 'backend',
+    spriteColor: '#10b981',
+    specialty: ['Node.js', 'Express', 'API Key Pools', 'Cluster Balancing'],
+    tasksCompleted: 59,
+    status: 'idle',
+    thoughtBubble: 'Keeping all 9 API keys load-balanced...',
+    energy: 92,
+    coffeeLevel: 75,
+    deskPosition: { x: 400, y: 160 },
+    currentPosition: { x: 400, y: 160 }
+  },
+  {
+    id: 'worker-qa',
+    name: 'Marcus Vance',
+    role: 'Principal QA & Security Auditor',
+    department: 'QA & Ops',
+    personality: 'Zero-tolerance bug hunter who stresses edge cases to perfection.',
+    avatarSprite: 'qa',
+    spriteColor: '#f59e0b',
+    specialty: ['Type Checks', 'Failover Recovery', 'JSON Verification'],
+    tasksCompleted: 51,
+    status: 'idle',
+    thoughtBubble: 'Zero errors detected in pipeline.',
+    energy: 90,
+    coffeeLevel: 60,
+    deskPosition: { x: 540, y: 160 },
+    currentPosition: { x: 540, y: 160 }
+  }
+];
