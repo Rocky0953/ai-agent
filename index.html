@@ -8,8 +8,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=VT323&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS Engine -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Space Mono', 'sans-serif'],
+              pixel: ['"Press Start 2P"', 'monospace'],
+              vt: ['VT323', 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
   </head>
-  <body class="bg-slate-950 text-slate-100 overflow-x-hidden antialiased">
+  <body class="bg-slate-950 text-slate-100 min-h-screen overflow-x-hidden antialiased">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
